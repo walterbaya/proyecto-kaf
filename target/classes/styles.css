@@ -1,0 +1,109 @@
+/* ===== ROOT ===== */
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f0f2f8;
+}
+
+/* ===== TÍTULOS ===== */
+.titulo {
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* ===== LABELS ===== */
+.label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+/* ===== CAMPOS DE TEXTO ===== */
+.text-field {
+    -fx-font-size: 26px;
+    -fx-pref-height: 64px;
+    -fx-pref-width: 600px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #9ca3af;
+    -fx-border-width: 2.5px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 0 18px;
+    -fx-text-fill: #111827;
+}
+
+.text-field:focused {
+    -fx-border-color: #2563eb;
+    -fx-effect: dropshadow(gaussian, rgba(37,99,235,0.2), 6, 0, 0, 0);
+}
+
+/* ===== ÁREA DE TEXTO ===== */
+.text-area {
+    -fx-font-size: 26px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #9ca3af;
+    -fx-border-width: 2.5px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #111827;
+}
+
+.producto {
+    -fx-font-size: 28px;
+    -fx-font-family: "Consolas";
+    -fx-text-fill: #111827;
+}
+
+/* ===== BOTONES ===== */
+.button {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 450px;
+    -fx-pref-height: 90px;
+    -fx-background-radius: 14px;
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.button:pressed {
+    -fx-background-color: #1e40af;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* ===== MENSAJES DE ESTADO ===== */
+.estado-ok {
+    -fx-text-fill: #15803d;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.estado-error {
+    -fx-text-fill: #b91c1c;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+/* ===== BOTÓN VOLVER ===== */
+.boton-volver {
+    -fx-font-size: 24px;
+    -fx-pref-width: 350px;
+    -fx-pref-height: 72px;
+    -fx-background-radius: 12px;
+    -fx-background-color: #6b7280;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.boton-volver:hover {
+    -fx-background-color: #4b5563;
+}
+
+.boton-volver:pressed {
+    -fx-background-color: #374151;
+}

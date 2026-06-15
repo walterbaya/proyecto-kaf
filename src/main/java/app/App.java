@@ -13,6 +13,9 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
+        stage.setWidth(1200);
+        stage.setHeight(800);
+
         DatabaseManager.inicializar();
 
         ExcelService excel =
@@ -29,6 +32,11 @@ public class App extends Application {
                 new Scene(
                         loader.load());
 
+        scene.getStylesheets().add(
+                getClass()
+                        .getResource("/styles.css")
+                        .toExternalForm());
+
         stage.setTitle(
                 "Sistema de Calzado");
 
@@ -38,6 +46,9 @@ public class App extends Application {
 
             WebcamManager.close();
         });
+
+        stage.setMaximized(true);
+
 
         stage.show();
 

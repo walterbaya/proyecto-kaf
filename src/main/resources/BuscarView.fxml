@@ -7,29 +7,36 @@
 <VBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="ui.BuscarController"
       alignment="CENTER"
-      spacing="10">
+      spacing="15">
 
     <children>
 
-        <Label text="Buscar Producto"/>
+        <Button
+                text="← VOLVER AL INICIO"
+                onAction="#volver"/>
+
+        <Label
+                text="CONSULTA DE PRODUCTOS"
+                styleClass="titulo"/>
 
         <ImageView
                 fx:id="webcamView"
-                fitWidth="400"
-                fitHeight="300"/>
+                fitWidth="800"
+                fitHeight="500"/>
 
         <TextField
                 fx:id="txtQR"
                 editable="false"/>
 
         <Button
-                text="Buscar"
+                text="BUSCAR"
                 onAction="#buscar"/>
 
         <TextArea
                 fx:id="resultado"
-                prefWidth="500"
-                prefHeight="250"/>
+                prefWidth="900"
+                prefHeight="350"
+                styleClass="producto"/>
 
     </children>
 

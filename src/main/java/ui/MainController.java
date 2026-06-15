@@ -30,10 +30,16 @@ public class MainController {
         Scene scene =
                 new Scene(loader.load());
 
+        scene.getStylesheets().add(
+                getClass()
+                        .getResource("/styles.css")
+                        .toExternalForm());
+
         BuscarController controller =
                 loader.getController();
 
         buscarStage = new Stage();
+        buscarStage.setMaximized(true);
 
         buscarStage.setTitle(
                 "Buscar Producto");
@@ -68,10 +74,16 @@ public class MainController {
         Scene scene =
                 new Scene(loader.load());
 
+        scene.getStylesheets().add(
+                getClass()
+                        .getResource("/styles.css")
+                        .toExternalForm());
+
         VentaController controller =
                 loader.getController();
 
         ventaStage = new Stage();
+        ventaStage.setMaximized(true);
 
         ventaStage.setTitle(
                 "Registrar Venta");

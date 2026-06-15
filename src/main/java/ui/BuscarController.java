@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import model.Producto;
 import service.QRScannerService;
 import util.ImageUtils;
@@ -138,32 +139,43 @@ public class BuscarController {
 
         mostrarProducto(p);
     }
-
-    private void mostrarProducto(
-            Producto p) {
+    private void mostrarProducto(Producto p) {
 
         resultado.setText(
 
-                "QR: " + p.getQr()
+                "CÓDIGO:      " + p.getCodigo()
 
-                        + "\n\nCódigo: "
-                        + p.getCodigo()
-
-                        + "\nDescripción: "
+                        + "\n\nDESCRIPCIÓN: "
                         + p.getDescripcion()
 
-                        + "\nMarca: "
+                        + "\n\nMARCA:       "
                         + p.getMarca()
 
-                        + "\nTalle: "
+                        + "\n\nTALLE:       "
                         + p.getTalle()
 
-                        + "\nColor: "
+                        + "\n\nCOLOR:       "
                         + p.getColor()
 
-                        + "\nStock: "
+                        + "\n\nSTOCK:       "
                         + p.getStock()
+
+                        + "\n\nQR:          "
+                        + p.getQr()
         );
+    }
+
+    @FXML
+    private void volver() {
+
+        shutdown();
+
+        Stage stage =
+                (Stage) txtQR
+                        .getScene()
+                        .getWindow();
+
+        stage.close();
     }
 
     public void shutdown() {

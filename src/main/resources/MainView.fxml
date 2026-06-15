@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
+
+<VBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="ui.MainController"
-      spacing="20"
-      alignment="CENTER">
+      alignment="CENTER"
+      spacing="30">
 
-    <Label text="Sistema de Calzado"/>
+    <children>
 
-    <Button
-            text="Buscar Producto"
-            onAction="#abrirBusqueda"/>
+        <Label
+                text="SISTEMA DE CALZADO"
+                styleClass="titulo"/>
 
-    <Button
-            text="Realizar Venta"
-            onAction="#abrirVenta"/>
+        <Button
+                text="BUSCAR PRODUCTO"
+                onAction="#abrirBusqueda"/>
 
-    <Button
-            text="Salir"
-            onAction="#salir"/>
+        <Button
+                text="REALIZAR VENTA"
+                onAction="#abrirVenta"/>
+
+        <Button
+                text="SALIR"
+                onAction="#salir"/>
+
+    </children>
 
 </VBox>

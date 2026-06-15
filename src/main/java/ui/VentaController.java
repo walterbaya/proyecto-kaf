@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
+import javafx.stage.Stage;
 import service.QRScannerService;
 import service.VentaService;
 import util.ImageUtils;
@@ -103,6 +104,19 @@ public class VentaController {
             lblEstado.setText(
                     e.getMessage());
         }
+    }
+
+    @FXML
+    private void volver() {
+
+        shutdown();
+
+        Stage stage =
+                (Stage) txtQR
+                        .getScene()
+                        .getWindow();
+
+        stage.close();
     }
 
     public void shutdown() {
