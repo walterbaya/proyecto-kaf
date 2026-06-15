@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.VentaController"
+      alignment="CENTER"
+      spacing="10">
+
+    <children>
+
+        <Label text="Registrar Venta"/>
+
+        <ImageView
+                fx:id="webcamView"
+                fitWidth="400"
+                fitHeight="300"/>
+
+        <TextField
+                fx:id="txtQR"
+                editable="false"/>
+
+        <Button
+                text="Vender"
+                onAction="#vender"/>
+
+        <Label
+                fx:id="lblEstado"/>
+
+    </children>
+
+</VBox>
