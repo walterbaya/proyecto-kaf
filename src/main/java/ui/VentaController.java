@@ -107,9 +107,13 @@ public class VentaController {
 
     public void shutdown() {
 
-        if(executor != null) {
+        try {
 
-            executor.shutdownNow();
+            if (executor != null) {
+                executor.shutdownNow();
+            }
+
+        } catch (Exception ignored) {
         }
     }
 }

@@ -15,24 +15,26 @@ public class WebcamManager {
 
         try {
 
-            if(webcam == null) {
+            if (webcam == null) {
 
                 webcam = Webcam.getDefault();
 
-                if(webcam == null) {
+                if (webcam == null) {
                     throw new RuntimeException(
-                            "No se detectó ninguna webcam");
+                            "No se encontró ninguna webcam");
                 }
 
                 webcam.setViewSize(
                         new Dimension(640, 480));
+            }
 
+            if (!webcam.isOpen()) {
                 webcam.open();
             }
 
             return webcam;
 
-        } catch(Exception e) {
+        } catch (Exception e) {
 
             throw new RuntimeException(
                     "Error iniciando webcam",
@@ -42,15 +44,17 @@ public class WebcamManager {
 
     public static synchronized void close() {
 
-        if(webcam != null) {
+        try {
 
-            try {
+            if (webcam != null &&
+                    webcam.isOpen()) {
+
                 webcam.close();
-            }
-            catch(Exception ignored) {
             }
 
             webcam = null;
+
+        } catch (Exception ignored) {
         }
     }
 }

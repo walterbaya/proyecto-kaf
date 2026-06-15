@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import service.ExcelService;
+import service.WebcamManager;
 
 public class App extends Application {
 
@@ -33,7 +34,13 @@ public class App extends Application {
 
         stage.setScene(scene);
 
+        stage.setOnCloseRequest(event -> {
+
+            WebcamManager.close();
+        });
+
         stage.show();
+
     }
 
     public static void main(String[] args) {
